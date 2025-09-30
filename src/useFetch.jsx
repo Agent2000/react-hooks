@@ -11,9 +11,7 @@ export function useFetch(url) {
       setError(null);
 
       const res = await fetch(url);
-
-      const json = await res.json();
-      setData(json);
+      setData(res.json());
     } catch (e) {
       setError(e.message);
     } finally {
