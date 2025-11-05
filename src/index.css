@@ -36,7 +36,7 @@ button {
   width: 200px;
 }
 button:hover {
-  border-color: rgb(46, 20, 22);
+  border-color: rgb(61, 65, 131);
 }
 button:focus,
 button:focus-visible {
