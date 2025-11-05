@@ -10,9 +10,11 @@ export function App() {
     <>
       {error && <p>Ошибка: {error}</p>}
       <div>
-        <button onClick={refetch}>{isLoading ? "Загрузка..." : "Обновить"}</button>
-        {data && (
-          <div class={"container"}>
+        <button onClick={() => refetch({ params: { _limit: 3 } })}>
+          {isLoading ? "Загрузка..." : "Обновить"}
+        </button>
+        {data && !isLoading && (
+          <div>
             <ul>
               {data.map((item) => (
                 <li key={item.id}>
